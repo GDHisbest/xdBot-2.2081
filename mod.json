@@ -1,18 +1,18 @@
 {
-	"geode": "4.4.0",
+	"geode": "5.10.1",
 	"gd": {
-		"win": "2.2074",
-		"android": "2.2074"
+		"win": "2.2081",
+		"android": "2.2081"
 	},
 	"version": "2.4.1",
-	"id": "zilko.xdbot",
-	"name": "xdBot",
-	"developer": "Zilko",
+	"id": "flim.xdbotnew",
+	"name": "xdBotNew",
+	"developer": "flim",
 	"description": "Best Free Bot fr",
 	"dependencies": [
 		{
 			"id": "geode.custom-keybinds",
-			"version": ">=v1.10.0",
+			"version": ">=v2.2.2",
 			"importance": "required",
 			"platforms": ["win"]
 		}
@@ -126,6 +126,33 @@
 			"description": "Locks the delta.",
 			"type": "bool",
 			"default": false
+		}
+		"lock_delta_mode": {
+			"name": "Lock Delta Mode",
+			"description": "Controls whether lock delta prioritizes accuracy or performance.",
+			"type": "string",
+			"default": "Accuracy",
+			"one-of": ["Accuracy", "Fast"]
+		},
+		"lock_delta_real_time": {
+			"name": "Lock Delta Real Time",
+			"description": "When disabled, caps how many physics steps lock delta can process per visual frame.",
+			"type": "bool",
+			"default": true
+		},
+		"lock_delta_max_upr": {
+			"name": "Lock Delta Max UPR",
+			"description": "Maximum updates per render when lock delta real time is disabled.",
+			"type": "int",
+			"default": 10,
+			"min": 1,
+			"max": 200
+		},
+		"lock_delta_use_visual_updates": {
+			"name": "Lock Delta Visual Updates",
+			"description": "Scales the max UPR cap by the current visual FPS when lock delta real time is disabled.",
+			"type": "bool",
+			"default": true
 		}
 	},
 	"resources": {
