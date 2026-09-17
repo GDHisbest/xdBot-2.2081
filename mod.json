@@ -126,7 +126,7 @@
 			"description": "Locks the delta.",
 			"type": "bool",
 			"default": false
-		}
+		},
 		"lock_delta_mode": {
 			"name": "Lock Delta Mode",
 			"description": "Controls whether lock delta prioritizes accuracy or performance.",
